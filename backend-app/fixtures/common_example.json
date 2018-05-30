@@ -1,0 +1,9 @@
+[
+  {
+    "pk": 1,
+    "model": "common.Example",
+    "fields": {
+      "simple": "Hello MadBlackPixels"
+    }
+  }
+]

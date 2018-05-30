@@ -1,0 +1,31 @@
+######## ARGS #######
+PROTOCOL=http
+HOST_NAME=0.0.0.0
+FRONTEND_REQ_HOST=127.0.0.1
+
+POSTGRES_DB=quality_it
+POSTGRES_USER=quality_it_user
+POSTGRES_PASSWORD=1Ecv1(fd24Lsdfk)3Fsd
+
+ADMIN_NAME='quality'
+ADMIN_PASS='Qwerty1!qwe'
+ADMIN_MAIL='admin@example.com'
+
+SECRET_KEY='1b711&ctkj3rv3RASDZX4w5sa-)sdsdc-j62vfws124nxq&pqe16*dqunn-s&'
+
+
+
+##### CONSTANTS #####
+BACKEND_SERVICE_HOST=0.0.0.0
+BACKEND_SERVICE_PORT=11011
+
+POSTGRES_PORT=5432
+POSTGRES_HOST=database
+
+BACKEND_NGINX_PORT=13660 
+FRONTEND_REQ_PORT=13660
+
+ALLOWED_LIST='backend-app'
+CORS_LIST='localhost','127.0.0.1'
+
+#
