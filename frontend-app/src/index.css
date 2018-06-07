@@ -9,10 +9,26 @@
     background-color: #ffffff;
 }
 
+a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 26px;
+}
+
+
+a:hover{
+    color: #fff;
+}
+
+.nav{
+    padding-top: 56px;
+}
 
 /* - > Custom < - */
 body{
-    font-family: 'Play', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 .full-screen-height {
     height: 100vh;
@@ -66,11 +82,8 @@ body{
 /* - > Header < - */
 .headroom-wrapper__max_width {
     max-width: 1600px;
-    padding: 54px;
 }
-.headroom-wrapper{
-    height: 82px!important;
-}
+
 .brand-logo__header {
     width: 175px;
     padding-left: 5px;
@@ -80,7 +93,7 @@ body{
 
 /* - > Burger menu btn < - */
 .burger-button__color{
-    background-color: #6c7e85;
+    background-color: #353535;
 }
 
 .bm-burger-button {
@@ -182,6 +195,13 @@ body{
     margin-left: 5px;
     user-select: none;
 }
+.intro_row{
+    margin-top: -50px;
+}
+.intro{
+    height: 140vh;
+    min-height: 650px!important;
+}
 
 /* - > Language choice btn < - */
 .btn-group__lang{
@@ -200,41 +220,170 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.intro_block{
-    margin: -60px 18px 18px 18px;
-    padding-top: 85px;
-    background-image: url('/blocks/intro/intro.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100vh;
-    min-height: 700px;
+h2{
+    font-weight: 700;
+    font-size: 48px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    color: #353535;
 }
 
-.text-center{
-    text-align: center;
+
+.jumbotron h1{
+    font-weight: 700;
+    color: #0070c9;
+}
+.intro_h2 {
+    font-weight: 400;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.intro-block h2{
+    font-weight: 400;
+    color: #353535;
+}
+
+.main-grid{
+    margin-top: -150px;
+}
+
+.headroom{
+    padding: 24px;
+}
+.team-block {
+    padding-top: 0px!important;
+}
+.team-block h2{
+    margin-top: 0;
+    text-align: right;
+}
+.team-block__text{
+    text-align: left;
+    font-size: 22px;
+    padding-top: 36px;
+    padding-bottom: 52px;
+}
+.rer{
+    height: 700px;
+}
+
+
+
+.block_row{
+    padding-top: 54px;
+    padding-bottom: 54px;
+}
+.block_row__small{
+    padding-top: 28px;
+    padding-bottom: 32px;
+}
+
+.text-block{
+    padding-top: 44px;
+}
+.server_img{
+    margin-top: -42px;
+}
+.camera_img{
+    padding-top: 18px;
+}
+.air_img{
+    padding-top: 40px;
+}
+
+
+.text-block li{
+    font-size: 22px;
+    padding-left: 36px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding-left: 1.3em;
+}
+li:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  display: inline-block;
+  color: #0070c9;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+
+.control-label{
+    color: #0070c9;
+    font-size: 22px;
+}
+
+.form-control{
+    border-radius: 0px;
+}
+.has-feedback label~.form-control-feedback{
+    top: 36px;
+}
+
+.form-control{
+    color: #353535;
+}
+
+
+
+
+.btn-default.disabled, .btn-default.disabled.active, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled:focus, .btn-default.disabled:hover, .btn-default[disabled], .btn-default[disabled].active, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled]:focus, .btn-default[disabled]:hover, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default.active, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:hover{
+    background: #353535;
+    opacity: 1;
+}
+
+
+.btn-default {
+    border: none;
+    border-radius: 0;
+    background: #006fc9;
+    color: #fff;
+    margin-top: 18px;
+    letter-spacing: .5px;
+}
+
+.btn-default:hover{
+    background: #0f4b92;
+    color: #fff;
+}
+
+.footer{
+    background: #353535;
+    margin-top: 36px;
+
+}
+.footer-row{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: 18px;
+    letter-spacing: 1px;
+
+}
+.footer-text{
+    color: #fff;
+}
+.footer-text a{
+    font-weight: 400;
+    font-size: 18px;
 }
 
 .jumbotron{
-    border-radius: 0;
     background-color: transparent;
+    margin-top: -90px;
+    padding-left: 0!important;
+    padding-right: 0!important;
 }
 
-.jumbotron h1{
-    color: #177ec3;
+.contact-form{
+    margin: auto;
+    padding-top: 34px;
 }
 
 
@@ -266,16 +415,48 @@ body{
     .container{ width: 900px; }
 }
 @media (max-width: 1040px) {
-    .container{ width: 850px; }
+    .container{ width: 100%; }
+    .jumbotron h1{
+        font-size: 50px;
+    }
+    .intro_h2{
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 996px) {
     .background__black_small{ background-color: #353535 }
-    .burger-button__color{ background: #fff }
     .headroom-wrapper__max_width{ padding:5px }
+
 }
 
-@media (max-width: 850px) {
+@media (max-width: 991px){
+    .block_row{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .text-block {
+        padding-top:20px;
+    }
+    h2 {
+        padding-top:0;
+    }
+    .block_row__small{
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .contact-form{
+        padding-top:10px;
+    }
+    .team-block__text{
+        font-size:18px;
+    }
+    .text-block li{
+        font-size:18px;
+    }
+}
+
+@media (max-width: 870px) {
     .intro-block__h1{
         font-size: 70px;
     }
@@ -288,6 +469,39 @@ body{
         text-align: left;
         left: 24px;
         top: 260px;
+    }
+    .jumbotron h1{
+        font-size: 42px;
+    }
+    .intro_h2{
+        font-size: 24px;
+    }
+    .jumbotron {
+        width: 700px
+    }
+    .footer-row{
+        padding-top: 24px;
+        padding-bottom: 24px;
+        font-size: 16px;
+        letter-spacing: .5px;
+    }
+
+    .footer-text a{
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: .5px;
+    }
+}
+
+@media (max-width: 720px) {
+    .jumbotron {
+        width: 550px
+    }
+    .jumbotron h1{
+        font-size: 38px;
+    }
+    .intro_h2{
+        font-size: 22px;
     }
 }
 
@@ -302,5 +516,24 @@ body{
     .intro-block{
         margin-left: -5px;
         max-width: 90%;
+    }
+    .jumbotron {
+        padding-top: 170px;
+        width: 370px
+    }
+    .intro_h2{
+        padding-top: 30px;
+        font-weight: 800;
+        font-size: 22px;
+    }
+    .footer-row{
+        font-size: 12px;
+        letter-spacing: .5px;
+    }
+
+    .footer-text a{
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: .5px;
     }
 }

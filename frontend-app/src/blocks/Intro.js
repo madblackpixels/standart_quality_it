@@ -1,16 +1,27 @@
-import React, { Component } from 'react'
-import { Grid, Jumbotron } from 'react-bootstrap'
+import React, { Component }   from 'react';
+import { DirectLink, Element} from 'react-scroll';
+
+import LazyHero from 'react-lazy-hero';
+
+// bootstrap
+import { Jumbotron, Grid, Row } from 'react-bootstrap';
 
 // code
 export default class Intro extends Component {
-
     render() {
         return (
-            <Grid fluid={true} className="intro_block">
-                <Jumbotron className="text-center">
-                    <h1>Стандарт качества ИТ</h1>
+            <LazyHero imageSrc="/blocks/intro/intro.png" minHeight={"140vh"} parallaxOffset={500} opacity={0.1} className="intro">
+                <Jumbotron>
+                    <Grid className="block_row intro_row">
+                        <Row>
+                            <Element name="intro" className="element" >
+                                <h1>СТАНДАРТ КАЧЕСТВА ИТ</h1>
+                            </Element>
+                            <h2 className="intro_h2">проектирование программного обеспечения и слаботочных систем</h2>
+                        </Row>
+                    </Grid>
                 </Jumbotron>
-            </Grid>
+            </LazyHero>
         )
     }
 }

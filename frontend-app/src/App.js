@@ -26,7 +26,7 @@ export default class App extends Component {
         return(
             <div>
                 <Header showMenu={this.updateData.bind(this)} />
-                <MenuBar isOpen={this.state.isOpen} />
+                <MenuBar isOpen={this.state.isOpen} showMenu={this.updateData.bind(this)}/>
                 <Main />
             </div>
         )
