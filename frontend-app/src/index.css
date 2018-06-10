@@ -1,6 +1,6 @@
 /* - > Colors < - */
 .background__lite-gray{
-    background-color: #f7f7f7;
+    background-color: #ededed;
 }
 .background__black{
     background-color: #353535;
@@ -385,7 +385,9 @@ li:before {
     margin: auto;
     padding-top: 34px;
 }
-
+.headroom-wrapper{
+    height: 106px!important;
+}
 
 @media screen and (min-width: 768px) {
     .jumbotron {
@@ -503,6 +505,10 @@ li:before {
     .intro_h2{
         font-size: 22px;
     }
+    .headroom{
+        background: #fff;
+        padding: 5px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -535,5 +541,15 @@ li:before {
         font-weight: 400;
         font-size: 12px;
         letter-spacing: .5px;
+    }
+    .intro{
+        min-height:400px!important;
+    }
+}
+
+@media (max-width: 350px) {
+    .jumbotron{
+        width: 300px;
+        padding-top: 120px;
     }
 }
