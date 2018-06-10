@@ -12,8 +12,7 @@ export default class Team extends Component {
             <Grid fluid={true}>
                 <LazyHero imageSrc="/blocks/team/team.jpg" minHeight="70vh" parallaxOffset="0" opacity="0.3" className="rer">
                     <Grid className="block_row">
-                     <Row>
-                         <Col xs={12}>
+                        
                              <Jumbotron className="team-block">
                                  <h2>
                                     <Element name="team" className="element" >
@@ -27,9 +26,9 @@ export default class Team extends Component {
                                      Мы разбираемся в технологиях и трендах ИТ, интернета, а также инженерных систем.
                                  </div>
                              </Jumbotron>
-                         </Col>
-                     </Row>
-                 </Grid>
+
+
+                    </Grid>
                 </LazyHero>
             </Grid>
         )
