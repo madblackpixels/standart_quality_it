@@ -1,0 +1,9 @@
+[
+  {
+    "pk": 1,
+    "model": "common.settings",
+    "fields": {
+      "argument": "example@mail.ru"
+    }
+  }
+]

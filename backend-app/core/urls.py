@@ -6,6 +6,6 @@ from django.contrib import admin
 cache_registry.autodiscover()
 
 urlpatterns = [
-    url(r'^', include('apps.common.urls')),
+    url(r'^api/', include('apps.common.urls')),
     url(r'^admin/', admin.site.urls),
 ]

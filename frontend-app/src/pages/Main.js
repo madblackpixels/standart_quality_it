@@ -20,10 +20,9 @@ export default class Main extends Component {
                 <Service_block1/>
                 <Service_block2/>
                 <Team />
-                <ContactUs/>
+                <ContactUs endpoint="api/lead/"/>
                 <Footer/>
             </Grid>
-
         )
     }
 }

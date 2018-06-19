@@ -1,11 +1,19 @@
 #!/bin/bash
-sleep 10
+
+# send mail daemon
+/etc/init.d/sendmail start
 
 python3 /backend/manage.py makemigrations
 python3 /backend/manage.py migrate
 python3 /backend/manage.py makemigrations common
 python3 /backend/manage.py migrate common
-python3 /backend/manage.py loaddata /backend/fixtures/common_example.json
+
+python3 /backend/manage.py loaddata /backend/fixtures/common_about.json
+python3 /backend/manage.py loaddata /backend/fixtures/common_intro.json
+python3 /backend/manage.py loaddata /backend/fixtures/common_service1.json
+python3 /backend/manage.py loaddata /backend/fixtures/common_service2.json
+python3 /backend/manage.py loaddata /backend/fixtures/common_service3.json
+python3 /backend/manage.py loaddata /backend/fixtures/common_settings.json
 
 echo "from django.contrib.auth.models import User; 
 User.objects.filter(email=$ADMIN_MAIL).delete(); 

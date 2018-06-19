@@ -6,6 +6,30 @@ import { Grid, Row, Col, Image } from 'react-bootstrap'
 
 // code
 export default class Service_block1 extends Component {
+
+    state = {
+        data: []
+    };
+
+    async getTextContent() {
+        try{
+            const sourceFile = require('../common');
+            const text_content = await fetch(
+                sourceFile.hostname +
+                "/api/service1"
+            );
+
+            const data = await text_content.json();
+            this.setState({data});
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    componentWillMount() {
+        this.getTextContent()
+    }
+
     render() {
         return (
             <Grid fluid={true}>
@@ -18,10 +42,9 @@ export default class Service_block1 extends Component {
                         </h2>
                         <Col xs={12} md={7}>
                            <ul className="text-block">
-                               <li>Проводить аудит существующих решений.</li>
-                               <li>Проектировать ИТ инфраструткуру для вашего бизнеса.</li>
-                               <li>Вести прозрачную разработку.</li>
-                               <li>Внедрять и поддерживать ПО в процессе эксплуатации.</li>
+                               {this.state.data.map(item => (
+                                   <li>{item.service}</li>
+                               ))}
                            </ul>
                         </Col>
                         <Col md={5} smHidden={true} xsHidden={true}>

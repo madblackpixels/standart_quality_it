@@ -1,0 +1,30 @@
+[
+  {
+    "pk": 1,
+    "model": "common.service1",
+    "fields": {
+      "service": "Проводить аудит существующих решений."
+    }
+  },
+  {
+    "pk": 2,
+    "model": "common.service1",
+    "fields": {
+      "service": "Проектировать ИТ инфраструткуру для вашего бизнеса."
+    }
+  },
+  {
+    "pk": 3,
+    "model": "common.service1",
+    "fields": {
+      "service": "Вести прозрачную разработку."
+    }
+  },
+  {
+    "pk": 4,
+    "model": "common.service1",
+    "fields": {
+      "service": "Внедрять и поддерживать ПО в процессе эксплуатации."
+    }
+  }
+]

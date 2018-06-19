@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { DirectLink, Element} from 'react-scroll';
 
 // bootstrap
-import { Grid, Row, Col, FormGroup, ControlLabel, FormControl, HelpBlock, Button, Jumbotron } from 'react-bootstrap'
+import { Grid, Row, Col, FormGroup, ControlLabel, FormControl, HelpBlock, Button, Modal } from 'react-bootstrap'
 
 // code
 export default class ContactUs extends Component {
@@ -12,10 +12,13 @@ export default class ContactUs extends Component {
 
         this.handleChangeName = this.handleChangeName.bind(this);
         this.handleChangeMail = this.handleChangeMail.bind(this);
+        this.handleSubmit     = this.handleSubmit.bind(this);
+
 
         this.state = {
             name: '',
             mail: '',
+            show: false,
         };
     }
 
@@ -45,6 +48,26 @@ export default class ContactUs extends Component {
         this.setState({ mail: e.target.value });
     }
 
+    handleSubmit(event) {
+        event.preventDefault();
+        let data = {
+            name: this.state.name,
+            mail: this.state.mail,
+        };
+
+        //const data = new FormData(event.target);
+        fetch('http://localhost:8000/api/contactus', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
+
+        this.setState({ show: true })
+
+    }
+
     render() {
         const { name, mail } = this.state;
         const isEnabled = name.match(/^([А-я ]{1}[А-я ]+)$/i) && mail.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
@@ -58,7 +81,7 @@ export default class ContactUs extends Component {
                             </Element>
                         </h2>
                         <div className="contact-form">
-                            <form>
+                            <form onSubmit={this.handleSubmit}>
                                 <Col xs={12} xsOffset={0} sm={8} smOffset={2} md={6} mdOffset={0}>
                                 <FormGroup controlId="text" validationState={this.validateName()}>
                                     <ControlLabel>Ваше Имя:</ControlLabel>
@@ -89,6 +112,16 @@ export default class ContactUs extends Component {
                             </form>
                         </div>
                     </Row>
+                    <Modal show={this.state.show} onHide={this.handleHide} container={this} aria-labelledby="contained-modal-title">
+                        <Modal.Body>
+                            Спасибо, мы обязательно с Вами свяжемся.
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button bsSize="small" href="/">
+                                Закрыть
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
                 </Grid>
             </Grid>
         );

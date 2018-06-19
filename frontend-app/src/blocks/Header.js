@@ -12,7 +12,7 @@ import BrandLogo  from '../components/BrandLogo'
 export default class Header extends Component {
     render() {
         return(
-            <Headroom>
+            <Headroom className="headroom--pinned">
                 <Grid fluid={true} className="headroom-wrapper__max_width">
                     <BrandLogo />
                     <MenuBtn showMenu={this.props.showMenu} />
