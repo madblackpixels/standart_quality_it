@@ -1,7 +1,7 @@
 ######## ARGS #######
 PROTOCOL=http
-HOST_NAME=skit.s0565b32a.fastvps-server.com
-FRONTEND_REQ_HOST=skit.s0565b32a.fastvps-server.com
+HOST_NAME=s0565b32a.fastvps-server.com
+FRONTEND_REQ_HOST=s0565b32a.fastvps-server.com
 
 POSTGRES_DB=quality_it
 POSTGRES_USER=quality_it_user
@@ -26,6 +26,6 @@ BACKEND_NGINX_PORT=13660
 FRONTEND_REQ_PORT=13660
 
 ALLOWED_LIST='backend-app'
-CORS_LIST='skit.s0565b32a.fastvps-server.com:13660'
+CORS_LIST='s0565b32a.fastvps-server.com:13660'
 
 #
