@@ -1,1 +1,6 @@
-DAB3FE0317056BE81E609C467E75BC46083DD4F94174DDE66300F35EAEF396A8 comodoca.com 5b07cbfb5e6a9
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>Verification: bf9363d71aa44bb6</body>
+</html>
