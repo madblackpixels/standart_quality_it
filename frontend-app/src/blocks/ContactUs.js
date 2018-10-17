@@ -56,7 +56,8 @@ export default class ContactUs extends Component {
         };
 
         //const data = new FormData(event.target);
-        fetch('http://localhost:8000/api/contactus', {
+        const sourceFile = require('../common');
+        fetch(sourceFile.hostname + '/api/contactus', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
