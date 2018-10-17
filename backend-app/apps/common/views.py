@@ -24,33 +24,40 @@ class Example_json(APIView):
                 and re.match(pattern_mail, request.data['mail']) \
                 and serializer.is_valid():
 
-            addr = Settings.objects.get(id=1)
-            addr_list = [
-                addr.argument
-            ]
-            sender = 'standart.quality.it@gmail.com'
+            try:
+                addr = Settings.objects.get(id=1)
+                addr_list = [
+                    addr.argument
+                ]
+                sender = 'standart.quality.it@gmail.com'
 
-            msg = MIMEMultipart('alternative')
-            msg['Subject'] = 'Новый лид с сайта СКИТ'
-            msg['From'] = sender
-            msg['To'] = ", ".join(addr_list)
+                msg = MIMEMultipart('alternative')
+                msg['Subject'] = 'Новый лид с сайта СКИТ'
+                msg['From'] = sender
+                msg['To'] = ", ".join(addr_list)
 
-            _msg_body = '''
-            <p>Добрый день!</p>
-            <div>
-                Поступил новый лид с сайта СКИТ: {} {}
-            </div>
-            '''.format(request.data['name'], request.data['mail'])
+                _msg_body = '''
+                <p>Добрый день!</p>
+                <div>
+                    Поступил новый лид с сайта СКИТ: {} {}
+                </div>
+                '''.format(request.data['name'], request.data['mail'])
 
-            msg.attach(MIMEText(_msg_body, 'html', 'UTF-8'))
-            s = smtplib.SMTP('smtp.gmail.com:587')
-            s.ehlo()
-            s.starttls()
-            s.login('standart.quality.it@gmail.com', 'Qwerty1!qaz')
-            s.sendmail(sender, addr_list, msg.as_string())
+                msg.attach(MIMEText(_msg_body, 'html', 'UTF-8'))
+                s = smtplib.SMTP('smtp.gmail.com:587')
+                s.ehlo()
+                s.starttls()
+                s.login('standart.quality.it@gmail.com', 'Qwerty1!qaz')
+                s.sendmail(sender, addr_list, msg.as_string())
 
-            serializer.create(request.data)
-            return Response(serializer.data)
+            except Exception as e:
+                f = open('/tmp/mail_log', 'a')
+                f.write(str(e))
+                f.close()
+
+            finally:
+                serializer.create(request.data)
+                return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
