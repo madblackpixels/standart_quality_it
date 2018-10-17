@@ -4,4 +4,5 @@ WORKDIR   /frontend
 COPY    . /frontend
 
 RUN npm install
+RUN npm install -g react-scripts@1.1.4
 RUN npm run build
